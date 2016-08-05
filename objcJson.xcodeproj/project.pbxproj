@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE6407851D548DC500652BAC /* objcJson.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6407841D548DC500652BAC /* objcJson.h */; };
+		FE6407851D548DC500652BAC /* objcJson.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6407841D548DC500652BAC /* objcJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE64078C1D548DC500652BAC /* objcJson.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6407811D548DC500652BAC /* objcJson.framework */; };
 		FE6407911D548DC500652BAC /* objcJsonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6407901D548DC500652BAC /* objcJsonTests.m */; };
+		FE64079E1D548DDE00652BAC /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = FE64079B1D548DDE00652BAC /* Cartfile */; };
+		FE64079F1D548DDE00652BAC /* objcJson.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FE64079C1D548DDE00652BAC /* objcJson.podspec */; };
+		FE6407A31D548E2C00652BAC /* VDJsonObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6407A11D548E2C00652BAC /* VDJsonObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6407A41D548E2C00652BAC /* VDJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6407A21D548E2C00652BAC /* VDJsonObject.m */; };
+		FE6407A61D548ED400652BAC /* objcProperty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6407A51D548ED400652BAC /* objcProperty.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,12 @@
 		FE64078B1D548DC500652BAC /* objcJsonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = objcJsonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6407901D548DC500652BAC /* objcJsonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objcJsonTests.m; sourceTree = "<group>"; };
 		FE6407921D548DC500652BAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE64079B1D548DDE00652BAC /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		FE64079C1D548DDE00652BAC /* objcJson.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = objcJson.podspec; sourceTree = "<group>"; };
+		FE64079D1D548DDE00652BAC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FE6407A11D548E2C00652BAC /* VDJsonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDJsonObject.h; sourceTree = "<group>"; };
+		FE6407A21D548E2C00652BAC /* VDJsonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDJsonObject.m; sourceTree = "<group>"; };
+		FE6407A51D548ED400652BAC /* objcProperty.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcProperty.framework; path = Carthage/Build/iOS/objcProperty.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6407A61D548ED400652BAC /* objcProperty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,9 +65,13 @@
 		FE6407771D548DC500652BAC = {
 			isa = PBXGroup;
 			children = (
+				FE6407A51D548ED400652BAC /* objcProperty.framework */,
 				FE6407831D548DC500652BAC /* objcJson */,
 				FE64078F1D548DC500652BAC /* objcJsonTests */,
 				FE6407821D548DC500652BAC /* Products */,
+				FE64079B1D548DDE00652BAC /* Cartfile */,
+				FE64079C1D548DDE00652BAC /* objcJson.podspec */,
+				FE64079D1D548DDE00652BAC /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +89,8 @@
 			children = (
 				FE6407841D548DC500652BAC /* objcJson.h */,
 				FE6407861D548DC500652BAC /* Info.plist */,
+				FE6407A11D548E2C00652BAC /* VDJsonObject.h */,
+				FE6407A21D548E2C00652BAC /* VDJsonObject.m */,
 			);
 			path = objcJson;
 			sourceTree = "<group>";
@@ -94,6 +112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE6407851D548DC500652BAC /* objcJson.h in Headers */,
+				FE6407A31D548E2C00652BAC /* VDJsonObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +197,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE64079F1D548DDE00652BAC /* objcJson.podspec in Resources */,
+				FE64079E1D548DDE00652BAC /* Cartfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6407A41D548E2C00652BAC /* VDJsonObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +336,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = objcJson/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -330,6 +356,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = objcJson/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
