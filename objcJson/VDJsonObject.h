@@ -19,9 +19,6 @@
 @interface VDJsonObject : NSObject
 
 #pragma mark Constructor
-
-
-#pragma mark Public Method
 + (instancetype)modelWithJsonString:(NSString *)jsonString;
 + (instancetype)modelWithJsonString:(NSString *)jsonString usingEncoding:(NSStringEncoding)encoding;
 
@@ -32,9 +29,7 @@
 
 + (NSArray *)arrayWithDictionaries:(NSArray *)dictionaries;
 
-+ (NSDictionary *)jsonKeyDictionary;
-+ (NSDateFormatter *)jsonDateFormatter;
-
+#pragma mark Public Method
 - (NSDictionary *)toJsonDictionary;
 - (NSString *)toJsonString;
 
@@ -42,7 +37,8 @@
 
 
 #pragma mark Protected Method
-
++ (NSDictionary *)jsonKeyDictionary;
++ (NSDateFormatter *)jsonDateFormatter;
 
 #pragma mark Private Method
 

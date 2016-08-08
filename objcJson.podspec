@@ -32,6 +32,6 @@ Pod::Spec.new do |s|
   s.public_header_files = 'objcJson/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
 
-#  s.dependency 'objcView'
+  s.dependency 'objcProperty'
 
 end

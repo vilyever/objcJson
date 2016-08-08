@@ -13,6 +13,8 @@
 @interface VDJsonObject ()
 
 - (void)__i__initVDJsonObject;
++ (void)__i__insertJsonValue:(NSDictionary *)jsonDictionary jsonKey:(NSString *)jsonKey model:(id)model property:(VDProperty *)property;
++ (id)__i__getValueFromModel:(id)model property:(VDProperty *)property;
 
 @end
 
@@ -20,9 +22,6 @@
 @implementation VDJsonObject
 
 #pragma mark Constructor
-
-
-#pragma mark Public Method
 + (instancetype)modelWithJsonString:(NSString *)jsonString {
     return [self modelWithJsonString:jsonString usingEncoding:NSUTF8StringEncoding];
 }
@@ -103,16 +102,7 @@
     return [NSArray arrayWithArray:array];
 }
 
-+ (NSDictionary *)jsonKeyDictionary {
-    return [NSDictionary new];
-}
-
-+ (NSDateFormatter *)jsonDateFormatter {
-    NSDateFormatter *jsonDateFormatter = [ [NSDateFormatter alloc] init];
-    [jsonDateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    return jsonDateFormatter;
-}
-
+#pragma mark Public Method
 - (NSDictionary *)toJsonDictionary {
     NSMutableDictionary *jsonDictionary = [NSMutableDictionary new];
     
@@ -238,7 +228,15 @@
 
 
 #pragma mark Protected Method
++ (NSDictionary *)jsonKeyDictionary {
+    return [NSDictionary new];
+}
 
++ (NSDateFormatter *)jsonDateFormatter {
+    NSDateFormatter *jsonDateFormatter = [ [NSDateFormatter alloc] init];
+    [jsonDateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    return jsonDateFormatter;
+}
 
 #pragma mark Private Method
 - (void)__i__initVDJsonObject {
